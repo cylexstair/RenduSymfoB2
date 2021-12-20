@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion cagnotte{% endblock %}
+
+{% block body %}
+    <h1>Participants</h1>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Argent</th>
+            <th></th>
+        </tr>
+        {% for humain in personnes %}
+            <tr>
+                <td>{{ humain.nom }}</td>
+                <td>{{ humain.argent }} €</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path("ajouter") }}" class="btn btn-success">Ajouter</a>
+    <a href="{{ path("calculer") }}" class="btn btn-success">Calculer</a>
+{% endblock %}

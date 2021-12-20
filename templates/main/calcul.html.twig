@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion cagnotte{% endblock %}
+
+{% block body %}
+    <h1>Plan de remboursement</h1>
+
+    <table>
+        {% for etape in historique %}
+            <tr>
+                <td>{{ etape }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path("main") }}" class="btn btn-success">Menu</a>
+{% endblock %}
